@@ -1,0 +1,98 @@
+import Image from "next/image";
+import coverImg from "./reactjs.png";
+import { PostLayout } from "@/components/PostLayout";
+
+export const metaSeo = {
+  author: "TarreDev",
+  date: "2023-03-31",
+  title: "¿Qué es ReactJS?",
+  slug: "que-es-react",
+  tags: ["React"],
+  keywords: "react javascript ",
+  description: "Introducción a React.",
+  logo: "/assets/img/svg/react.svg",
+};
+
+export default (props) => <PostLayout metaSeo={metaSeo} {...props} />;
+
+<b>1. Introducción a React</b>
+
+React es una librería de Javascript para construir interfaces de usuario, creada por Facebook. Utiliza una sintaxis similar a HTML, llamada JSX, para definir componentes que se pueden reutilizar en toda la aplicación. React también utiliza un Virtual DOM, lo que significa que sólo actualiza las partes de la página que han cambiado, en lugar de actualizar toda la página.
+
+Para comenzar a trabajar con React, lo primero que necesitas hacer es crear una nueva aplicación de React. Esto se puede hacer utilizando el CLI de React, que se puede instalar a través de npm. Una vez instalado, puedes crear una nueva aplicación de React utilizando el siguiente comando:
+
+```
+npx create-react-app my-app
+```
+
+Esto creará una nueva aplicación de React en la carpeta <b>`my-app.`</b>
+
+Para crear un componente en React, se utiliza una función que devuelve elementos JSX. Por ejemplo, un componente sencillo que muestra un mensaje de bienvenida se vería así:
+
+```jsx
+import React from "react";
+import Header from "./Header";
+
+function App() {
+  return (
+    <div>
+      <Header title="Mi Aplicación" />
+      <p>Bienvenido a mi aplicación.</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+En este ejemplo, el componente Header se importa y se utiliza para renderizar un encabezado con el título "Mi Aplicación". También se muestra un párrafo de texto debajo del encabezado.
+
+React también tiene un sistema de eventos que permite a los desarrolladores manejar eventos como clics de mouse y cambios de entrada. A continuación, se muestra un ejemplo de un componente en React que maneja un evento de clic:
+
+```javascript
+import React, { useState } from "react";
+
+function Button(props) {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <p>Has hecho clic {count} veces</p>
+      <button onClick={handleClick}>Haz clic aquí</button>
+    </div>
+  );
+}
+
+export default Button;
+```
+
+En este ejemplo, el componente Button utiliza el hook useState de React para manejar un contador interno. El botón en el componente tiene un evento de clic que llama a la función handleClick, que actualiza el estado del contador y vuelve a renderizar el componente.
+
+Finalmente, React también admite el uso de componentes de clase, que proporcionan una sintaxis diferente para definir componentes en React. A continuación, se muestra un ejemplo de un componente de clase en React:
+
+```javascript
+function ClickableWelcomeMessage(props) {
+  const [message, setMessage] = useState("¡Bienvenido!");
+
+  function handleClick() {
+    setMessage("¡Gracias por hacer clic!");
+  }
+
+  return (
+    <div>
+      <h1>{message}</h1>
+      <button onClick={handleClick}>Haz clic aquí</button>
+    </div>
+  );
+}
+
+ReactDOM.render(<ClickableWelcomeMessage />, document.getElementById("root"));
+```
+
+En este ejemplo, el componente ClickableWelcomeMessage utiliza el hook useState para definir su estado inicial como "¡Bienvenido!". Cuando se hace clic en el botón, se llama a la función handleClick, que utiliza setMessage para cambiar el estado del componente a "¡Gracias por hacer clic!". El componente se renderiza de nuevo con el nuevo mensaje de bienvenida.
+
+Estos son solo algunos ejemplos de cómo funcionan los componentes en React. Los componentes pueden ser mucho más complejos y pueden tener todo tipo de funcionalidades y características avanzadas. Con React, es posible construir interfaces de usuario increíblemente ricas y dinámicas con relativamente poco código.

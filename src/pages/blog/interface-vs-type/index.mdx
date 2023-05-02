@@ -1,0 +1,92 @@
+import Image from "next/image";
+import coverImg from "./typescript-vs-interface.webp";
+import { PostLayout } from "@/components/PostLayout";
+
+export const metaSeo = {
+  author: "TarreDev",
+  date: "2023-03-31",
+  title: "Interface vs Typescript",
+  slug: "interface-vs-type",
+  tags: ["Typescript", "Javascript"],
+  keywords: "interface type ",
+  description:
+    "Typescript vs Javascript: diferencias y ejemplos de código. ¿Qué es Typescript? ¿Cómo difiere del popular lenguaje de programación Javascript? Descubre las características adicionales de tipado estático y orientación a objetos de Typescript, y cómo puede ayudar a mejorar la calidad del código. ",
+  logo: "/assets/img/svg/typescript.svg",
+};
+
+export default (props) => <PostLayout metaSeo={metaSeo} {...props} />;
+
+<Image
+  className="mt-5 rounded-md"
+  src={coverImg}
+  alt="Nextjs y Tailwind"
+  placeholder="Typescript vs Javascript"
+  priority
+  width="600"
+/>
+
+En TypeScript, tanto las interfaces como los tipos son herramientas que se utilizan para definir la forma de un objeto. Aunque tienen una finalidad similar, hay algunas diferencias clave entre ellas.
+
+<b>Interfaces</b>
+
+Una interface es una forma de definir la estructura y el comportamiento de un objeto en TypeScript. En términos simples, es un contrato que especifica cómo deben verse y comportarse los objetos. Cuando se define una interface, se están estableciendo ciertas reglas para los objetos que deben implementar esa interface.
+
+Veamos un ejemplo de cómo se define una interface y cómo se puede utilizar en el código:
+
+```typescript
+// Definición de una interface
+interface User {
+  name: string;
+  age: number;
+}
+
+// Función que toma un objeto que implementa la interface "User"
+function getUserInfo(user: User) {
+  console.log(`Name: ${user.name}, Age: ${user.age}`);
+}
+
+// Objeto que implementa la interface "User"
+const john: User = {
+  name: "John",
+  age: 30,
+};
+
+// Llamando a la función con el objeto "john"
+getUserInfo(john);
+```
+
+En este ejemplo, hemos definido una interface llamada User que especifica que un objeto debe tener una propiedad name de tipo string y una propiedad age de tipo number. Luego, hemos definido una función llamada getUserInfo que toma un objeto que implementa la interface User. Finalmente, hemos creado un objeto john que implementa la interface User y lo hemos pasado como argumento a la función getUserInfo.
+
+<b>Tipos / Types</b>
+
+Un tipo en TypeScript es una forma de crear un alias para un conjunto de tipos de datos. Es una forma de definir una forma de objeto, pero también se puede utilizar para definir tipos de datos primitivos, como números o cadenas de texto. A diferencia de las interfaces, los tipos no definen comportamientos ni establecen contratos para los objetos.
+
+Veamos un ejemplo de cómo se define un tipo y cómo se puede utilizar en el código:
+
+```typescript
+// Definición de un type
+type User = {
+  name: string;
+  age: number;
+};
+
+// Función que toma un objeto que cumple con el tipo "User"
+function getUserInfo(user: User) {
+  console.log(`Name: ${user.name}, Age: ${user.age}`);
+}
+
+// Objeto que cumple con el tipo "User"
+const john: User = {
+  name: "John",
+  age: 30,
+};
+
+// Llamando a la función con el objeto "john"
+getUserInfo(john);
+```
+
+En este ejemplo, hemos definido un tipo llamado User que especifica que un objeto debe tener una propiedad name de tipo string y una propiedad age de tipo number. Luego, hemos definido una función llamada getUserInfo que toma un objeto que cumple con el tipo User. Finalmente, hemos creado un objeto john que cumple con el tipo User y lo hemos pasado como argumento a la función getUserInfo.
+
+<b>Resumen</b>
+
+Las interfaces se utilizan en TypeScript para definir contratos y especificaciones para los objetos, mientras que los tipos se utilizan para crear alias para los tipos de datos y para definir formas de objetos. Ambos son herramientas útiles en la programación orientada a objetos de TypeScript, pero se utilizan en diferentes situaciones según las necesidades del programador.

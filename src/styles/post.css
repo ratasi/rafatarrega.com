@@ -1,0 +1,46 @@
+.container-post p {
+  color: #fafafa;
+  margin: 15px 0;
+  font-size: 17px;
+}
+
+.container-post pre {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  overflow-x: auto;
+  border: 1px solid;
+  border-color: #3f3f46;
+}
+
+.container [data-rehype-pretty-code-fragment] {
+  position: relative;
+  margin: 20px 0;
+}
+
+.container [data-language="typescript"]::before {
+  background: url("/assets/img/tags/typescript.png");
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  content: "";
+  border-radius: 0;
+  top: -12px;
+  position: absolute;
+  right: 0;
+}
+
+.container [data-language="js"]::before {
+  background: url("/assets/img/tags/javascript.png");
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  content: "";
+  border-radius: 0;
+  top: -12px;
+  position: absolute;
+  right: 0;
+}
