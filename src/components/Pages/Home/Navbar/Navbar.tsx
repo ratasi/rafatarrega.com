@@ -6,12 +6,12 @@ export const Navbar = () => {
   const { route } = useRouter();
 
   return (
-    <header className="px-1 pt-3 lg:px-5 lg:pt-6">
-      <nav className="mx-auto flex max-w-md content-center justify-evenly rounded-full border border-zinc-400 text-sm text-zinc-400	transition hover:text-white ">
+    <header className="max-w-3xl px-1 pt-3 mx-auto lg:px-5 lg:pt-6">
+      <nav className="flex content-center justify-center mx-auto text-sm transition border rounded-lg border-white/10 bg-zinc-900/20 text-textLight ">
         {route !== "/" && (
           <Link
             href="/"
-            className="flex items-center p-2 hover:bg-slate-600	hover:text-amber-400"
+            className="flex items-center px-2 py-2 rounded-md md:px-8 hover:bg-slate-600 hover:text-amber-400"
           >
             🏠
           </Link>
@@ -20,7 +20,7 @@ export const Navbar = () => {
           <Link
             key={data.id}
             href={data.link}
-            className="flex items-center	rounded-md px-2 py-1 text-center transition duration-500 hover:bg-slate-600 hover:text-amber-400 md:m-1"
+            className="flex items-center px-2 py-3 text-center transition duration-500 rounded-md md:py-2 md:px-5 hover:bg-slate-600 hover:text-amber-400 md:m-1"
           >
             {data.name}
           </Link>

@@ -19,13 +19,13 @@ export function LastCourses() {
               />
             </div>
             <div className="mt-3 dark:text-textLight">
-              <p className="text-md font-bold ">{name}</p>
-              <p className="mt-2 block h-10 text-sm line-clamp-2">
+              <p className="font-bold text-md ">{name}</p>
+              <p className="block h-10 mt-2 text-sm line-clamp-2">
                 {description}
               </p>
             </div>
 
-            <div className="mt-5 flex justify-between">
+            <div className="flex justify-between mt-5">
               {links.map(({ icon, link, name }) => (
                 <Link href={link} key={link} target="_blank">
                   <div className="shadowButtonDark flex h-[30px] items-center rounded-md bg-zinc-800 p-2  transition-transform duration-500 hover:scale-105">
@@ -46,16 +46,18 @@ export function LastCourses() {
         ))}
       </div>
 
-      <div className="mt-10 flex w-fit items-center border-b-2 border-solid border-[#38bdf8]">
-        <Link href="/cursos" className="dark:text-textLight">
-          Ver todos los cursos disponibles
-        </Link>
-        <Image
-          src="/assets/img/svg/chevron-right.svg"
-          alt="Todos los artículos"
-          width="17"
-          height="17"
-        />
+      <div className="relative px-6 py-2 mt-10 transition duration-500 border-2 border-solid rounded-md w-fit border-textLight hover:scale-105 hover:bg-[#38bdf8]">
+        <Link href="/cursos" className="absolute bottom-0 right-0 w-full h-full dark:text-textLight" />
+
+        <div className="flex items-center ">
+          <p className="text-textLight">Ver todos los cursos disponibles</p>
+          <Image
+            src="/assets/img/svg/chevron-right.svg"
+            alt="Todos los artículos"
+            width="17"
+            height="17"
+          />
+        </div>
       </div>
     </aside>
   );
