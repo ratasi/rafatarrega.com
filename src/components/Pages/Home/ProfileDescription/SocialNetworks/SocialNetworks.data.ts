@@ -22,11 +22,11 @@ export const dataSocialNetworks = [
   {
     name: "Udemy",
     icon: "udemy",
-    link: "https://udemy.com/tarredev",
+    link: "https://www.udemy.com/user/rafatarre/",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://linkedin.com/rafatarrega",
+    link: "https://www.linkedin.com/in/rafa-t%C3%A1rrega-a2b16713b/",
   },
 ];

@@ -178,7 +178,7 @@ export const dataRecomendations = [
       {
         name: `Vivir sin jefe - Sergio Fernández`,
         url: "https://www.amazon.es/Vivir-Empresa-Sergio-Fern%C3%A1ndez-L%C3%B3pez/dp/8496981525/",
-        image: "/assets/img/jpg/libros/boluda.jpeg",
+        image: "/assets/img/jpg/libros/vivir-sin-jefe.jpg",
       },
       {
         name: `Aprende de la mafia - Louis Ferrante`,
