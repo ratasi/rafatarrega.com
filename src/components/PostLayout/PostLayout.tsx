@@ -1,4 +1,6 @@
-import { formatDate } from "@/lib/formatDate";
+
+
+import fn from "@/utils/fn";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { HeadPost } from "../HeadPost";
@@ -12,7 +14,7 @@ export function PostLayout(props: PostLayoutProps) {
     <>
       <HeadPost metaSeo={metaSeo} />
       <div className="mt-6 lg:relative lg:mt-32">
-        <div className="mx-auto max-w-2xl px-4">
+        <div className="max-w-2xl px-4 mx-auto">
           <button
             type="button"
             onClick={() => router.back()}
@@ -28,9 +30,9 @@ export function PostLayout(props: PostLayoutProps) {
           </button>
 
           <article>
-            <time className="text-md mt-4 flex items-center text-zinc-500">
+            <time className="flex items-center mt-4 text-md text-zinc-500">
               <span className="h-4 w-0.5 rounded-full bg-zinc-500"></span>
-              <span className="ml-3">{formatDate(metaSeo.date)}</span>
+              <span className="ml-3">{fn.formatDate(metaSeo.date)}</span>
             </time>
             <h1 className="mt-4 text-4xl font-bold text-textLight">
               {metaSeo.title}
@@ -43,7 +45,7 @@ export function PostLayout(props: PostLayoutProps) {
               ))}
             </div>
           </article>
-          <div className="container-post prose dark:prose-invert mt-4 text-zinc-900 dark:text-white">
+          <div className="mt-4 prose container-post dark:prose-invert text-zinc-900 dark:text-white">
             {children}
           </div>
         </div>

@@ -1,5 +1,7 @@
 import { HeaderSeo } from "@/components/HeaderSeo";
 import { HomePage } from "@/components/Pages/Home/Home";
+import Layouts from "@/layouts";
+
 import { BlogProps } from "@/types/Blog.types";
 import { getAllArticles } from "@/utils/allPosts";
 
@@ -9,7 +11,9 @@ export default function Home(props: BlogProps) {
   return (
     <>
       <HeaderSeo />
-      <HomePage articles={articles} />
+      <Layouts.MainLayout>
+        <HomePage articles={articles} />
+      </Layouts.MainLayout>
     </>
   );
 }
