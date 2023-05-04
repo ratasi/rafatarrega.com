@@ -1,0 +1,98 @@
+import Image from "next/image";
+import { PostLayout } from "@/components/PostLayout";
+import coverImg from "./next-vs-react.webp";
+
+export const metaSeo = {
+  author: "TarreDev",
+  date: "2023-04-05",
+  title: "Diferencias entre ReactJS y NextJS",
+  slug: "react-js-vs-next-js",
+  tags: ["React", "NextJS"],
+  keywords: "react javascript nextjs diferencias",
+  description:
+    "Si alguna vez te has preguntado cuales son las diferencias entre ReactJS y NextJS te lo explico en este artículo.",
+  logo: "/assets/img/svg/react.svg",
+};
+
+export default (props) => <PostLayout metaSeo={metaSeo} {...props} />;
+
+<Image
+  className="mt-5 rounded-md"
+  src={coverImg}
+  alt="Nextjs y Tailwind"
+  placeholder="Typescript vs Javascript"
+  priority
+  width="600"
+/>
+
+ReactJS y NextJS son dos herramientas populares para el desarrollo de aplicaciones web en JavaScript. Aunque ambas están basadas en React, tienen diferencias importantes en cuanto a sus características y funcionalidades. En este artículo, exploraremos las diferencias entre ReactJS y NextJS, y proporcionaremos ejemplos de código para ilustrar sus características únicas.
+
+<h3>
+  <b>ReactJS</b>
+</h3>
+
+ReactJS es una biblioteca de JavaScript para crear interfaces de usuario. Es utilizada
+por muchas empresas y desarrolladores debido a su eficiencia, escalabilidad y facilidad
+de uso. ReactJS se centra en la creación de componentes reutilizables, lo que permite
+a los desarrolladores crear interfaces de usuario modulares y fáciles de mantener.
+
+ReactJS proporciona un enfoque declarativo para la creación de interfaces de usuario, lo que significa que los desarrolladores describen cómo se debe ver una interfaz de usuario y ReactJS se encarga de actualizar la vista automáticamente cuando los datos cambian. Esto se logra a través del uso del estado y las props.
+
+A continuación, un ejemplo de código ReactJS que muestra cómo se utiliza el estado para actualizar el contenido de un componente:
+
+```javascript
+import React, { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  function increment() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={increment}>Click me</button>
+    </div>
+  );
+}
+```
+
+En este ejemplo, se utiliza el hook useState de React para declarar una variable de estado count y su función setCount. La función increment actualiza el valor de count cada vez que se hace clic en el botón.
+
+<h3>
+  <b>NextJS</b>
+</h3>
+
+NextJS es un framework de React que se centra en la creación de aplicaciones web del lado del servidor. NextJS proporciona una capa adicional de abstracción sobre ReactJS, lo que permite a los desarrolladores crear aplicaciones web escalables y rápidas con facilidad.
+
+NextJS utiliza la técnica de pre-renderización (también conocida como renderización del lado del servidor) para mejorar el rendimiento de la aplicación. En lugar de esperar a que se cargue todo el contenido en el lado del cliente, NextJS renderiza el contenido en el lado del servidor antes de enviarlo al cliente. Esto reduce significativamente el tiempo de carga de la página y mejora la experiencia del usuario.
+
+A continuación, un ejemplo de código NextJS que muestra cómo se utiliza la pre-renderización para mejorar el rendimiento de la aplicación:
+
+```jsx
+function Home(props) {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+      <p>{props.description}</p>
+    </div>
+  );
+}
+
+Home.getInitialProps = async function () {
+  const res = await fetch("https://api.example.com/home");
+  const data = await res.json();
+  return {
+    title: data.title,
+    description: data.description,
+  };
+};
+
+export default Home;
+```
+
+En este ejemplo, se utiliza el método getInitialProps de NextJS para realizar una solicitud a la API del servidor antes de renderizar la página. Luego, los datos obtenidos se pasan al componente como props para su renderización. Como resultado, el contenido se carga de manera más rápida y la experiencia del usuario mejora.
+
+En conclusión, ReactJS es una excelente opción para aquellos desarrolladores que buscan crear interfaces de usuario modulares y fáciles de mantener, mientras que NextJS es ideal para aquellos que buscan mejorar el rendimiento de sus aplicaciones web mediante la pre-renderización del contenido en el lado del servidor. Ambas herramientas tienen sus ventajas y desventajas, y la elección de una u otra dependerá de las necesidades específicas del proyecto.
