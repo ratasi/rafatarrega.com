@@ -3,6 +3,7 @@
 import fn from "@/utils/fn";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { Footer } from "../Footer";
 import { HeadPost } from "../HeadPost";
 import { PostLayoutProps } from "./PostLayout.types";
 
@@ -50,6 +51,7 @@ export function PostLayout(props: PostLayoutProps) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
