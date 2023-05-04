@@ -12,7 +12,7 @@ export function BlogPage(props: BlogProps) {
   };
 
   return (
-    <main className="mt-5 max-w-4xl px-5 lg:mt-20 lg:pr-10">
+    <main className="max-w-4xl px-5 mt-5 lg:mt-20 lg:pr-10">
       <h1 className="text-4xl font-bold text-textLight">
         Artículos sobre programación
       </h1>
@@ -20,13 +20,13 @@ export function BlogPage(props: BlogProps) {
         {articles.map((article) => (
           <article
             key={article.slug}
-            className="my-5 block cursor-pointer  md:flex md:space-x-8"
+            className="block my-5 cursor-pointer md:flex md:space-x-8"
             onClick={() => linkRouter(article.slug)}
           >
             <p className="mt-4 min-w-[100px] text-sm text-zinc-400">
               {article.date}
             </p>
-            <div className="bg:border-white/10 mb-10 w-full rounded-md border border-transparent  p-4 text-textLight	transition-transform duration-500 hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
+            <div className="w-full p-4 mb-10 transition-transform duration-500 border border-transparent rounded-md bg:border-white/10 text-textLight hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
               <InfoExtra article={article} />
             </div>
           </article>
@@ -39,7 +39,7 @@ export function BlogPage(props: BlogProps) {
 function InfoExtra({ article }: any) {
   return (
     <>
-      <p className=" text-lg font-bold">{article.title}</p>
+      <p className="text-lg font-bold ">{article.title}</p>
       <p className="mb-2 text-sm">{article.description}</p>
       <div className="flex text-zinc-400">
         {article.tags.map((tag: any) => (
@@ -50,7 +50,7 @@ function InfoExtra({ article }: any) {
       </div>
       <Link
         href={`/blog/${article.slug}`}
-        className="mt-4 flex items-center text-amber-600"
+        className="flex items-center mt-4 text-amber-600"
       >
         <span className="text-sm">Leer artículo</span>
         <Image
