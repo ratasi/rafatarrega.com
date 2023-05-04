@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Footer } from "../Footer";
 import { HeadPost } from "../HeadPost";
+import { Navbar } from "../Pages/Home/Navbar";
 import { PostLayoutProps } from "./PostLayout.types";
 
 export function PostLayout(props: PostLayoutProps) {
@@ -14,6 +15,7 @@ export function PostLayout(props: PostLayoutProps) {
   return (
     <>
       <HeadPost metaSeo={metaSeo} />
+      <Navbar />
       <div className="mt-6 lg:relative lg:mt-32">
         <div className="max-w-2xl px-4 mx-auto">
           <button
