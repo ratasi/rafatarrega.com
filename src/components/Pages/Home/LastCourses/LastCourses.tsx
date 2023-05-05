@@ -8,7 +8,7 @@ export function LastCourses() {
       <h3 className="text-2xl dark:text-textLight">Últimos cursos</h3>
       <div className="grid gap-x-10 gap-y-5 lg:grid-cols-2">
         {dataCourses.map(({ name, links, thumbnail, description }) => (
-          <div key={name} className="mt-6">
+          <div key={name} className="relative p-2 mt-6 transition-transform duration-500 border border-transparent rounded-md cursor-pointer hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
             <div className="">
               <Image
                 src={`/assets/img/jpg/courses/${thumbnail}-thumbnail.jpeg`}
@@ -27,7 +27,8 @@ export function LastCourses() {
 
             <div className="flex justify-between mt-5">
               {links.map(({ icon, link, name }) => (
-                <Link href={link} key={link} target="_blank">
+                <div key={link}>
+                  <Link href={link} target="_blank" className="absolute bottom-0 right-0 w-full h-full" />
                   <div className="shadowButtonDark flex h-[30px] items-center rounded-md bg-zinc-800 p-2  transition-transform duration-500 hover:scale-105">
                     <Image
                       src={`/assets/img/svg/${icon}.svg`}
@@ -39,7 +40,7 @@ export function LastCourses() {
                       {name}
                     </span>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
