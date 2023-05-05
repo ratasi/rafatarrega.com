@@ -2,7 +2,7 @@ export type BlogProps = {
   articles: {
     slug: string;
     author: string;
-    date: string;
+    date: number;
     title: string;
     tags: [];
     keywords: string;
