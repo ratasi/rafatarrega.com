@@ -1,4 +1,5 @@
 import { BlogProps } from "@/types/Blog.types";
+import fn from "@/utils/fn";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -20,13 +21,14 @@ export function BlogPage(props: BlogProps) {
         {articles.map((article) => (
           <article
             key={article.slug}
-            className="block my-5 cursor-pointer md:flex md:space-x-8"
+            className="block my-5 cursor-pointer md:flex md:space-x-8 "
             onClick={() => linkRouter(article.slug)}
           >
             <p className="mt-4 min-w-[100px] text-sm text-zinc-400">
-              {article.date}
+              {fn.formatDate(article.date)}
             </p>
-            <div className="w-full p-4 mb-10 transition-transform duration-500 border border-transparent rounded-md bg:border-white/10 text-textLight hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
+            <div className="flex items-start w-full p-4 mb-10 transition-transform duration-500 border border-transparent rounded-md bg:border-white/10 text-textLight hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
+              <Image src={article.logo} alt={`Imagen artículo ${article.title}`} width="75" height="75" className="pt-3 pr-5" />
               <InfoExtra article={article} />
             </div>
           </article>
@@ -38,7 +40,7 @@ export function BlogPage(props: BlogProps) {
 
 function InfoExtra({ article }: any) {
   return (
-    <>
+    <div>
       <p className="text-lg font-bold ">{article.title}</p>
       <p className="mb-2 text-sm">{article.description}</p>
       <div className="flex text-zinc-400">
@@ -61,6 +63,6 @@ function InfoExtra({ article }: any) {
           className="ml-2"
         />
       </Link>
-    </>
+    </div>
   );
 }

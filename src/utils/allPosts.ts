@@ -19,6 +19,9 @@ export async function getAllArticles() {
 
   let articles = await Promise.all(articleFilenames.map(importArticle));
 
-  return articles;
-  //   return articles.sort((a, z) => new Date(z.date) - new Date(a.date));
+  const dataSorted = articles.sort((a, b) => {
+    return new Date(b.date).valueOf() - new Date(a.date).valueOf();
+  });
+
+  return dataSorted;
 }

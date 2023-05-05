@@ -22,7 +22,7 @@ export function PostLayout(props: PostLayoutProps) {
             type="button"
             onClick={() => router.back()}
             aria-label="Ir atrás al blog"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700/50 bg-zinc-800  shadow-md shadow-zinc-800/5 transition  hover:border-zinc-700 hover:ring-white/20  lg:absolute lg:-left-5 lg:-top-1.5 lg:mb-0 lg:-mt-2 "
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-700/50 bg-zinc-800  shadow-md shadow-zinc-800/5 transition  hover:border-zinc-700 hover:ring-white/20  lg:absolute lg:left-[7rem]	 lg:-top-1.5 lg:mb-0 lg:-mt-2 "
           >
             <Image
               src="/assets/img/svg/arrow-left.svg"

@@ -1,4 +1,5 @@
 import { BlogProps } from "@/types/Blog.types";
+import fn from "@/utils/fn";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -17,7 +18,7 @@ export function LastArticles(props: BlogProps) {
       {articles.map((article) => (
         <div key={article.slug}>
           <article
-            className="flex items-center px-1 py-2 my-6 transition-transform duration-500 border border-transparent rounded-md cursor-pointer hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20"
+            className="flex items-center p-2 my-6 transition-transform duration-500 border border-transparent rounded-md cursor-pointer hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20"
             onClick={() => goArticle(article.slug)}
           >
             <Image src={article.logo} alt="React Logo" width="70" height="70" />
@@ -30,7 +31,7 @@ export function LastArticles(props: BlogProps) {
                 >
                   <span className="h-4 w-0.5 rounded-full bg-zinc-900 dark:bg-white"></span>
                 </span>
-                <time className="pl-3 mt-2 text-md">{article.date}</time>
+                <time className="pl-3 mt-2 text-md">{fn.formatDate(article.date)}</time>
               </div>
               <p className="mt-2 line-clamp-2">{article.description}</p>
               <Link
