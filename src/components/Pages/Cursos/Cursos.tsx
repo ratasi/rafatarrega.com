@@ -11,7 +11,7 @@ export function CursosPage() {
         {dataCourses.map(({ name, thumbnail, description, links }) => (
           <div
             key={name}
-            className="flex flex-wrap px-3 py-5 transition-transform duration-500 border border-transparent rounded-lg bg:border-white/10 hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20"
+            className="relative flex flex-wrap px-3 py-5 transition-transform duration-500 border border-transparent rounded-lg bg:border-white/10 hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20"
           >
             <Image
               src={`/assets/img/jpg/courses/${thumbnail}-thumbnail.jpeg`}
@@ -28,7 +28,8 @@ export function CursosPage() {
             </p>
             <div className="flex justify-between mt-5">
               {links.map(({ icon, link }) => (
-                <Link href={link} key={link} target="_blank" rel="noreferrer">
+                <div key={link}>
+                  <Link href={link} target="_blank" rel="noreferrer" className="absolute bottom-0 right-0 w-full h-full" />
                   <div className="flex items-center w-full px-5 py-2 text-center transition-transform duration-500 rounded-md shadowButtonDark bg-zinc-800 hover:scale-105">
                     <Image
                       src={`/assets/img/svg/${icon}.svg`}
@@ -40,7 +41,7 @@ export function CursosPage() {
                       Curso Udemy
                     </span>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
