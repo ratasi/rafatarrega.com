@@ -11,6 +11,7 @@ export const HeaderSeo = (props: HeaderSeoProps) => {
         name="description"
         content={description ? description : "Desarrollador Frontend"}
       />
+      <meta name="google-site-verification" content="UsdOvrJeUrELBDna7yT1tQPb222s4y96lfdH_nBswRU" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <meta property="og:locale" content="es_ES" />
