@@ -6,7 +6,7 @@ export default function Document() {
       <Head />
       <body
         className="mx-auto min-h-screen max-w-7xl 
-       bg-bgDark bg-[url('/assets/img/svg/gradient-bg.svg')] bg-top bg-no-repeat"
+       bg-bgDark bg-[url('/assets/img/svg/gradient-bg.svg')] bg-top"
       >
         <Main />
         <NextScript />

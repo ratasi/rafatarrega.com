@@ -37,7 +37,7 @@ export function PostLayout(props: PostLayoutProps) {
               <span className="h-4 w-0.5 rounded-full bg-zinc-500"></span>
               <span className="ml-3">{fn.formatDate(metaSeo.date)}</span>
             </time>
-            <h1 className="mt-4 text-4xl font-bold text-textLight">
+            <h1 className="mt-4 text-4xl font-bold leading-tight text-textLight ">
               {metaSeo.title}
             </h1>
             <div className="flex">
