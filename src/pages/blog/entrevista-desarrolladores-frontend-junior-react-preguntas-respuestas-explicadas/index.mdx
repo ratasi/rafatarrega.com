@@ -1,0 +1,223 @@
+import Image from "next/image";
+import coverImg from "./preguntas-entrevistas-react-junior.jpg";
+import { PostLayout } from "@/components/PostLayout";
+
+export const metaSeo = {
+  author: "TarreDev",
+  date: "2023-07-13",
+  title:
+    "Preguntas de entrevista para desarrolladores frontend junior de React: 10 preguntas esenciales y respuestas explicadas",
+  slug: "entrevista-desarrolladores-frontend-junior-react-preguntas-respuestas-explicadas",
+  tags: ["React", "JuniorReact", "PreguntasEntrevistas"],
+  keywords: "frontend react junior",
+  description:
+    "¿Estás listo para entrevistar a desarrolladores frontend junior de React? Obtén una guía completa con 10 preguntas clave y respuestas explicadas para ayudarte en el proceso. Aprende sobre los conceptos fundamentales de React, ciclos de vida, enrutamiento, pruebas unitarias y buenas prácticas. Prepárate para seleccionar a los mejores talentos y construir un equipo sólido en el mundo del desarrollo frontend con React.",
+  logo: "/assets/img/svg/react.svg",
+};
+
+export default (props) => <PostLayout metaSeo={metaSeo} {...props} />;
+
+<Image
+  className="mt-5 rounded-md"
+  src={coverImg}
+  alt="Preguntas entrevista desarrolladores frontend Junior de React"
+  placeholder="Preguntas entrevista desarrolladores frontend Junior de React"
+  priority
+  width="600"
+/>
+
+¡Bienvenido/a! En este artículo, nos adentraremos en el emocionante mundo de las entrevistas a desarrolladores frontend
+junior de React. Si eres un desarrollador junior que se prepara
+para una entrevista, estás en el lugar indicado.
+
+Te voy a proporcionar una guía detallada que incluye 10 preguntas esenciales
+para evaluar las habilidades de un candidato en React, junto con explicaciones claras y concisas para cada una de ellas.
+Desde conceptos básicos de React hasta aspectos más avanzados como ciclos de vida, enrutamiento, pruebas unitarias y buenas prácticas,
+nos aseguraremos de que estés bien preparado/a para hacer las preguntas correctas y tomar decisiones informadas.
+
+<b>
+  ¡Comencemos a descubrir cómo encontrar y seleccionar a los mejores
+  desarrolladores frontend junior de React!
+</b>
+
+<hr className="mid"/>
+
+<h3>
+  <b>1- ¿Qué es React y cuáles son sus principales características?</b>
+</h3>
+
+Esta pregunta busca evaluar la comprensión básica del candidato sobre React y sus
+características clave, como el uso de componentes, el enfoque basado en el estado,
+la manipulación eficiente del DOM y el enrutamiento.
+
+Podríamos empezar explicando algo como: 
+
+React es una biblioteca de JavaScript de código abierto desarrollada por Facebook que se utiliza para construir interfaces de usuario interactivas y reactivas. Es una de las bibliotecas más populares y ampliamente utilizadas para el desarrollo frontend en la creación de aplicaciones web modernas y eficientes.
+
+Estas serían algunas de sus características:
+
+<ul>
+  <li>
+    <b> - Componentes</b>
+  </li>
+  <li>
+    <b> - JSX</b>
+  </li>
+  <li>
+   <b> - Virtual DOM</b>
+  </li>
+  <li>
+    <b> - Amplia comunidad y ecosistema</b>
+  </li>
+  <li>
+    <b> - Componentes reutilizables</b>
+  </li>
+</ul>
+
+
+<hr className="mid"/>
+
+<h3>  
+  <b>2. ¿Diferencia entre componentes de clase y componentes funcionales en React? </b>
+</h3>
+
+Los componentes de clase son como las abuelitas tradicionales, con su class y métodos especiales como render() y setState(). Son más verbosos y requieren enlaces para acceder a this.
+
+Por otro lado, los componentes funcionales son modernos y minimalistas, como esos amigos relajados que solo devuelven elementos JSX. Son más cortitos y fáciles de leer, y usamos hooks para el estado y el ciclo de vida.
+
+Ambos tienen sus usos, pero últimamente, los componentes funcionales se han vuelto los más populares. 😄🚀
+
+<hr className="mid"/>
+
+<h3>
+  <b>3. ¿Qué es JSX en React y por qué es útil?</b>
+</h3>
+
+JSX en React es como un lenguaje secreto que combina JavaScript y HTML. Nos permite escribir código HTML directamente dentro de nuestros componentes de React. Es como magia, ya que hace que la creación de interfaces de usuario sea mucho más sencilla y legible.
+
+En lugar de concatenar cadenas de texto y crear elementos DOM tediosamente, simplemente escribimos nuestros elementos JSX como si estuviéramos escribiendo HTML normal. ¡Es un gran ahorro de tiempo y nos permite enfocarnos en la lógica de nuestra aplicación!
+
+Luego, JSX es transformado en código JavaScript válido por React, por lo que el navegador lo comprende perfectamente. Nos da el poder de crear componentes visualmente atractivos sin sacrificar la potencia de JavaScript. ¡Es una combinación ganadora! 😄🎉
+
+```typescript
+export const MiComponente = () => {
+  const mensaje = '¡Hola, mundo!';
+
+  return (
+    <div>
+      <h1>Bienvenido a mi aplicación - TarreDev</h1>
+      <button>
+        {mensaje}
+      </button>
+    </div>
+  );
+};
+
+```
+
+En este ejemplo, hemos utilizado JSX para crear una estructura de componente más legible y similar a HTML. Tenemos un div que contiene un encabezado
+ h1 y un botón button. El contenido del botón está definido por la variable mensaje, que contiene el texto "¡Hola, mundo!". 
+ Cuando este componente se renderiza en el navegador, veremos el encabezado y un botón con el mensaje personalizado.
+
+
+
+
+<hr className="mid"/>
+
+<h3>
+  <b>4. ¿Qué es el estado (state) en React?</b>
+</h3>
+
+El estado es un objeto que almacena información relevante para un componente y puede
+afectar su representación y comportamiento. La respuesta esperada debe abordar la
+definición del estado y cómo se actualiza utilizando la función setState().
+
+<hr className="mid"/>
+
+<h3>
+  <b> 5. ¿Cuál es la diferencia entre las propiedades (props) y el estado (state) en React? </b>
+</h3>
+
+Esta pregunta busca evaluar la comprensión del candidato sobre las diferencias clave
+entre las propiedades y el estado en React. Deben mencionar que las propiedades son
+inmutables y se utilizan para pasar datos de un componente principal a un componente
+secundario, mientras que el estado es mutable y controlado internamente por el componente.
+
+
+<b>Props (Propiedades):</b> Datos de solo lectura que se pasan de un componente padre a un hijo.
+
+<b>State (Estado): </b>Datos modificables que pertenecen y afectan solo al componente que los contiene.
+
+<hr className="mid"/>
+
+<h3>
+  <b> 6. ¿Qué son los ciclos de vida (lifecycle) en React y cuáles son los métodos de ciclo de vida más comunes? </b>
+</h3>
+
+Los ciclos de vida en React son eventos que ocurren durante el montaje, actualización
+y desmontaje de un componente. El candidato debería mencionar algunos métodos de
+ciclo de vida comunes, como componentDidMount(), componentDidUpdate() y componentWillUnmount(),
+y explicar brevemente en qué momentos se activan.
+
+<hr className="mid"/>
+
+<h3><b>7. ¿Cómo se maneja el enrutamiento en React?</b></h3>
+
+React no tiene enrutamiento incorporado, por lo que se espera que el candidato mencione
+bibliotecas populares de enrutamiento, como React Router, y explique cómo se utilizan
+para manejar el enrutamiento en una aplicación de React.
+
+<hr className="mid"/>
+
+<h3><b> 8. ¿Qué son las pruebas unitarias y cómo se pueden realizar en componentes de React?</b></h3>
+
+Las pruebas unitarias son pruebas que se realizan en partes específicas del código
+para verificar su funcionalidad. El candidato debe mencionar herramientas como Jest
+y Enzyme, y explicar cómo se pueden escribir pruebas unitarias para componentes de
+React, utilizando métodos como describe(), it(), expect() y shallow().
+
+<hr className="mid"/>
+
+<h3><b>9. ¿Qué son los componentes controlados en React y por qué son útiles?</b></h3>
+
+Los componentes controlados en React son aquellos cuyos valores están vinculados al estado de 
+React y se actualizan a través de manejadores de eventos. En otras palabras, el estado de React 
+se convierte en la fuente única de verdad para el valor del componente, y cualquier cambio en el
+ valor del componente se refleja directamente en el estado y viceversa. Este enfoque asegura que el
+ estado y la interfaz de usuario estén siempre sincronizados.
+
+
+
+```typescript
+import  { useState } from 'react';
+
+export const ControlledComponent = () => {
+  const [name, setName] = useState('');
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  return (
+    <div>
+      <input type="text" value={name} onChange={handleNameChange} />
+      <p>Tu nombre: {name}</p>
+    </div>
+  );
+};
+
+```
+
+<hr className="mid"/>
+
+<h3><b> 10. ¿Cuáles son algunas buenas prácticas al desarrollar aplicaciones de React?</b></h3>
+
+Esta pregunta busca evaluar el conocimiento del candidato sobre las buenas prácticas
+de desarrollo en React. Deben mencionar aspectos como la modularización de componentes,
+el uso de llaves únicas para las listas, el manejo adecuado del estado, el rendimiento
+optimizado y la accesibilidad.
+
+<hr className="mid"/>
+
+Recuerda que estas preguntas son solo una guía y puedes ajustarlas según tus necesidades y el nivel de experiencia que buscas en un desarrollador frontend junior de React.
+
