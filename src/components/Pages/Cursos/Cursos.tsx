@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { dataCourses } from "./Cursos.data";
+import Atropos from 'atropos/react';
+
 
 export function CursosPage() {
   return (
@@ -9,9 +11,9 @@ export function CursosPage() {
 
       <div className="grid grid-cols-2 mt-10 gap-y-16 gap-x-6 lg:grid-cols-4">
         {dataCourses.map(({ name, thumbnail, description, links }) => (
-          <div
+          <Atropos
             key={name}
-            className="relative flex flex-wrap px-3 py-5 transition-transform duration-500 border border-transparent rounded-lg bg:border-white/10 hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20"
+            className="relative flex flex-wrap px-3 py-5 transition-transform duration-500 border border-transparent rounded-lg bg:border-white/10 hover:border-white/10 hover:bg-zinc-900/20"
           >
             <Image
               src={`/assets/img/jpg/courses/${thumbnail}-thumbnail.jpeg`}
@@ -44,7 +46,7 @@ export function CursosPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </Atropos>
         ))}
       </div>
     </main>
