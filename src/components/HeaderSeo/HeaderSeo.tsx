@@ -6,7 +6,7 @@ export const HeaderSeo = (props: HeaderSeoProps) => {
 
   return (
     <Head>
-      <title>{title ? title : "Rafa Tárrega • TarreDev | Frontend, Javascript, React y Tips sobre desarrollo"}</title>
+      <title>{title ? title : "Rafa Tárrega • TarreDev | Frontend, JavaScript, React y Tips sobre desarrollo"}</title>
       <meta
         name="description"
         content={description ? description : "Artículos sobre programación, tutoriales y recursos sobre el desarrollo web, javascript, React y tips sobre programación"}
