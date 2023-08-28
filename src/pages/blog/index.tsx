@@ -1,4 +1,3 @@
-import { Footer } from "@/components/Footer";
 import { HeaderSeo } from "@/components/HeaderSeo";
 import { BlogPage } from "@/components/Pages/Blog";
 import Layouts from "@/layouts";

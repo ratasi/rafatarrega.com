@@ -7,7 +7,7 @@ export const dataCourses = [
     links: [
       {
         name: "Obtener en Udemy",
-        link: "https://cursos.rafatarrega.com/curso-react-desde-cero",
+        link: "https://www.udemy.com/course/aprende-react-js-desde-cero-paso-a-paso/?couponCode=AGOSTO",
         icon: "link",
       },
     ],
