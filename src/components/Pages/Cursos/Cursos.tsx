@@ -7,13 +7,13 @@ import Atropos from 'atropos/react';
 export function CursosPage() {
   return (
     <main className="px-5 mt-5 max-w-7xl lg:mt-20 lg:pr-10">
-      <h1 className="text-5xl text-textLight">Todos mis cursos</h1>
+      <h1 className="text-3xl sm:text-5xl text-textLight">Todos mis cursos</h1>
 
-      <div className="grid grid-cols-2 mt-10 gap-y-16 gap-x-6 lg:grid-cols-4">
+      <div className="grid sm:mt-10 gap-y-5 sm:gap-y-16 gap-x-6 lg:grid-cols-4">
         {dataCourses.map(({ name, thumbnail, description, links }) => (
           <Atropos
             key={name}
-            className="relative flex flex-wrap px-3 py-5 transition-transform duration-500 border border-transparent rounded-lg bg:border-white/10 hover:border-white/10 hover:bg-zinc-900/20"
+            className="relative flex flex-wrap px-3 py-5 "
           >
             <Image
               src={`/assets/img/jpg/courses/${thumbnail}-thumbnail.jpeg`}

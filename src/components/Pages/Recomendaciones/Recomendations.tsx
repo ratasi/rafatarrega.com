@@ -10,7 +10,7 @@ export function RecomendationsPage() {
         El software que uso, los dispositivos me encantan, podcast que escucho y
         otras cosas que recomiendo
       </h1>
-      <h3 className="max-w-4xl mt-4 text-zinc-400">
+      <h3 className="max-w-4xl mt-4 text-textLight">
         Las cosas que uso para crear webs, mantenerme productivo o comprar para
         engañarme y pensar que estoy siendo productivo cuando en realidad solo
         estoy procrastinando. Aquí hay una gran lista de todas mis cosas

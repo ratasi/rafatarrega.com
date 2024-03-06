@@ -6,7 +6,7 @@ export function LastCourses() {
   return (
     <aside className="lg:pl-5">
       <h3 className="text-2xl dark:text-textLight">Últimos cursos</h3>
-      <div className="grid gap-x-10 gap-y-5 lg:grid-cols-2">
+      <div className="grid grid-cols-2 gap-x-10 gap-y-5 lg:grid-cols-2">
         {dataCourses.map(({ name, links, thumbnail, description }) => (
           <div key={name} className="relative p-2 mt-6 transition-transform duration-500 border border-transparent rounded-md cursor-pointer hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
             <div className="">
@@ -29,17 +29,17 @@ export function LastCourses() {
               {links.map(({ icon, link, name }) => (
                 <div key={link}>
                   <Link href={link} target="_blank" className="absolute bottom-0 right-0 w-full h-full" />
-                  <div className="shadowButtonDark flex h-[30px] items-center rounded-md bg-zinc-800 p-2  transition-transform duration-500 hover:scale-105">
+                  <button className="flex items-center gap-1 p-1 transition-transform duration-500 rounded-md sm:p-2 sm:gap-2 shadowButtonDark bg-zinc-800 hover:scale-105">
                     <Image
                       src={`/assets/img/svg/${icon}.svg`}
                       alt={name}
                       width="20"
                       height="20"
                     />
-                    <span className="ml-2 text-textLight hover:text-zinc-400">
+                    <span className="text-xs sm:text-base text-textLight hover:text-zinc-400">
                       {name}
                     </span>
-                  </div>
+                  </button>
                 </div>
               ))}
             </div>

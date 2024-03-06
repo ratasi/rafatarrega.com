@@ -14,26 +14,25 @@ export function LastArticles(props: BlogProps) {
 
   return (
     <main className="pr-5 mb-20 lg:p-2">
-      <h2 className="text-2xl dark:text-textLight">Últimos artículos</h2>
+      <h2 className="text-2xl text-textLight">Últimos artículos</h2>
       {articles.map((article) => (
         <div key={article.slug}>
           <article
-            className="flex items-center p-2 my-6 transition-transform duration-500 border border-transparent rounded-md cursor-pointer hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20"
+            className="flex items-center gap-3 p-2 my-6 transition-transform duration-500 border border-transparent rounded-md cursor-pointer hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20"
             onClick={() => goArticle(article.slug)}
           >
             <Image src={article.logo} alt="React Logo" width="70" height="70" />
-            <div className="ml-5 dark:text-textLight">
-              <h3 className="text-xl">{article.title}</h3>
+            <div className="ml-5text-textLight">
+              <h3 className="text-xl text-textLight">{article.title}</h3>
               <div className="relative mt-2">
                 <span
                   className="absolute inset-y-0 left-0 flex items-center"
                   aria-hidden="true"
                 >
-                  <span className="h-4 w-0.5 rounded-full bg-zinc-900 dark:bg-white"></span>
                 </span>
-                <time className="pl-3 mt-2 text-md">{fn.formatDate(article.date)}</time>
+                <time className="pl-3 mt-2 text-md text-textLight">{fn.formatDate(article.date)}</time>
               </div>
-              <p className="mt-2 line-clamp-2">{article.description}</p>
+              <p className="mt-2 line-clamp-2 text-textLight">{article.description}</p>
               <Link
                 href={article.slug}
                 className="flex items-center mt-2 text-amber-600"

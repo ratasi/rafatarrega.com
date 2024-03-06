@@ -27,7 +27,7 @@ export function BlogPage(props: BlogProps) {
             <p className="mt-4 min-w-[100px] text-sm text-zinc-400">
               {fn.formatDate(article.date)}
             </p>
-            <div className="flex items-start w-full p-4 mb-10 transition-transform duration-500 border border-transparent rounded-md bg:border-white/10 text-textLight hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
+            <div className="items-start w-full p-4 mb-10 transition-transform duration-500 border border-transparent rounded-md sm:flex bg:border-white/10 text-textLight hover:scale-105 hover:border-white/10 hover:bg-zinc-900/20">
               <Image src={article.logo} alt={`Imagen artículo ${article.title}`} width="75" height="75" className="pt-3 pr-5" />
               <InfoExtra article={article} />
             </div>

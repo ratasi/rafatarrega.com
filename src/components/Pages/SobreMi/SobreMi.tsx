@@ -8,15 +8,13 @@ export function SobreMiPage() {
       <div className="mt-5 lg:mt-20">
         <div className="justify-around md:flex lg:py-5">
           <div className="flex-1 px-5 ">
-            <h1 className="max-w-sm text-5xl font-bold text-transparent bold bg-gradient-to-r from-indigo-500 to-orange-500 bg-clip-text text-textLight">
-              <i>
-                Con código todo <span className="text-[5rem]">es posible</span>
-              </i>
+            <h1 className="max-w-sm text-3xl font-bold text-transparent sm:text-5xl bold gradientText ">
+              Con código todo <span className="">es posible</span>
             </h1>
             <h2 className="max-w-sm pr-4 text-2xl text-right text-textLight">
               -TarreDev-
             </h2>
-            <div className="mt-4 text-lg text-zinc-400">
+            <div className="mt-4 text-lg text-textLight">
               <p>Llevando este lema por bandera, me presento.</p>
 
               <p>
@@ -42,7 +40,7 @@ export function SobreMiPage() {
                     width="20"
                     height="20"
                   />
-                  <span className="ml-2 text-textLight hover:text-zinc-400">
+                  <span className="ml-2 text-textLight ">
                     Cursos disponibles
                   </span>
                 </div>
@@ -63,7 +61,7 @@ export function SobreMiPage() {
                 <Link
                   key={link}
                   href={link}
-                  className="flex items-center mx-auto text-zinc-400 hover:text-white"
+                  className="flex items-center mx-auto text-white hover:text-zinc-400"
                   target="_blank"
                 >
                   <Image
