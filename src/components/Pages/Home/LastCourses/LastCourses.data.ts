@@ -1,5 +1,18 @@
 export const dataCourses = [
   {
+    name: "E-commerce desde cero con NextJS",
+    thumbnail: "nextjs",
+    description:
+      "Aprende Next JS desde cero creando una tienda online de una tienda de café",
+    links: [
+      {
+        link: "https://www.udemy.com/course/nextjs-14-guia-completa-con-e-commerce-desde-cero/?referralCode=81187750EFBD3AA7A2D5",
+        icon: "link",
+        name: "Obtener en Udemy",
+      },
+    ],
+  },
+  {
     name: "ReactJS desde cero",
     thumbnail: "react",
     description:
