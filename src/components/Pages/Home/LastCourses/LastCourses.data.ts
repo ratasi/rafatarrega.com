@@ -1,5 +1,18 @@
 export const dataCourses = [
   {
+    name: "Dashboard dinámico desde cero con NextJS",
+    thumbnail: "dashboard-next-js",
+    description:
+      "Aprende Next JS desde cero creando un dashboard dinámico con empresas y clientes",
+    links: [
+      {
+        link: "https://www.udemy.com/course/nextjs-14-react-js-curso-de-0-a-experto-guia-completa/?referralCode=9E73ABBB3B4AA45CDBDF",
+        icon: "link",
+        name: "Obtener en Udemy",
+      },
+    ],
+  },
+  {
     name: "E-commerce desde cero con NextJS",
     thumbnail: "nextjs",
     description:
