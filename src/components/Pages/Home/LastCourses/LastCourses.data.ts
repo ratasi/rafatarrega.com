@@ -6,7 +6,7 @@ export const dataCourses = [
       "Aprende Next JS desde cero creando un dashboard dinámico con empresas y clientes",
     links: [
       {
-        link: "https://www.udemy.com/course/nextjs-14-react-js-curso-de-0-a-experto-guia-completa/?referralCode=9E73ABBB3B4AA45CDBDF",
+        link: "https://www.udemy.com/course/nextjs-14-guia-completa-con-e-commerce-desde-cero/?couponCode=TARREDEV-MAYO-1",
         icon: "link",
         name: "Obtener en Udemy",
       },
@@ -19,7 +19,7 @@ export const dataCourses = [
       "Aprende Next JS desde cero creando una tienda online de una tienda de café",
     links: [
       {
-        link: "https://www.udemy.com/course/nextjs-14-guia-completa-con-e-commerce-desde-cero/?referralCode=81187750EFBD3AA7A2D5",
+        link: "https://www.udemy.com/course/nextjs-14-guia-completa-con-e-commerce-desde-cero/?couponCode=TARREDEV-MAYO-2",
         icon: "link",
         name: "Obtener en Udemy",
       },
@@ -33,7 +33,7 @@ export const dataCourses = [
     links: [
       {
         name: "Obtener en Udemy",
-        link: "https://www.udemy.com/course/aprende-react-js-desde-cero-paso-a-paso/?couponCode=AGOSTO",
+        link: "https://www.udemy.com/course/aprende-react-js-desde-cero-paso-a-paso/?couponCode=TARREDEV-MAYO-3",
         icon: "link",
       },
     ],
