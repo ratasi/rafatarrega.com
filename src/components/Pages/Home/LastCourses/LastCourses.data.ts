@@ -6,7 +6,7 @@ export const dataCourses = [
       "Aprende Next JS desde cero creando un dashboard dinámico con empresas y clientes",
     links: [
       {
-        link: "https://www.udemy.com/course/nextjs-14-guia-completa-con-e-commerce-desde-cero/?couponCode=TARREDEV-MAYO-1",
+        link: "https://www.udemy.com/course/nextjs-14-react-js-curso-de-0-a-experto-guia-completa/?couponCode=MAYO2-TARREDEV",
         icon: "link",
         name: "Obtener en Udemy",
       },
