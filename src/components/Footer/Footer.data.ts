@@ -4,10 +4,6 @@ export const dataFooter = [
     link: "https://github.com/ratasi",
   },
   {
-    name: "Twitter",
-    link: "https://twitter.com/tarredev",
-  },
-  {
     name: "Instagram",
     link: "https://www.instagram.com/tarredev/?hl=es",
   },
