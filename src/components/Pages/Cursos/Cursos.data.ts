@@ -1,5 +1,31 @@
 export const dataCourses = [
   {
+    name: "Web Alquiler de coches desde cero | NextJS",
+    thumbnail: "rentalcars",
+    description:
+      "Aprende Next JS desde cero creando una web de alquiler de vehículos",
+    links: [
+      {
+        link: "https://cursos.rafatarrega.com/rental-cars",
+        icon: "link",
+        name: "Obtener en Udemy",
+      },
+    ],
+  },
+  {
+    name: "Dashboard dinámico desde cero con NextJS",
+    thumbnail: "dashboard-next-js",
+    description:
+      "Aprende Next JS desde cero creando un dashboard dinámico con empresas y clientes",
+    links: [
+      {
+        link: "https://www.udemy.com/course/nextjs-14-react-js-curso-de-0-a-experto-guia-completa/?couponCode=MAYO2-TARREDEV",
+        icon: "link",
+        name: "Obtener en Udemy",
+      },
+    ],
+  },
+  {
     name: "E-commerce desde cero con NextJS",
     thumbnail: "nextjs",
     description:
