@@ -1,5 +1,18 @@
 export const dataCourses = [
   {
+    name: "Web Alquiler de coches desde cero | NextJS & Stripe & React JS",
+    thumbnail: "rentalcars",
+    description:
+      "Aprende Next JS desde cero creando una web de alquiler de vehículos",
+    links: [
+      {
+        link: "https://cursos.rafatarrega.com/rental-cars",
+        icon: "link",
+        name: "Obtener en Udemy",
+      },
+    ],
+  },
+  {
     name: "Dashboard dinámico desde cero con NextJS",
     thumbnail: "dashboard-next-js",
     description:
